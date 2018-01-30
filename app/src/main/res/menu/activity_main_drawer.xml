@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/racismNavMenu"
+            android:title="@string/racism" />
+        <item
+            android:id="@+id/antirefugeNavMenu"
+            android:title="@string/antirefuge" />
+        <item
+            android:id="@+id/nationalismNavMenu"
+            android:title="@string/nationalism" />
+        <item
+            android:id="@+id/sexismNavMenu"
+            android:title="@string/sexism" />
+        <item
+            android:id="@+id/sPLearningNavMenu"
+            android:title="@string/selfpacedlearning" />
+    </group>
+
+    <item android:title="About Us">
+        <menu>
+            <item
+                android:id="@+id/aboutusNavMenu"
+                android:icon="@drawable/information"
+                android:title="@string/aboutus" />
+            <item
+                android:id="@+id/contactusNavMenu"
+                android:icon="@drawable/callus"
+                android:title="@string/contactus" />
+        </menu>
+    </item>
+
+</menu>

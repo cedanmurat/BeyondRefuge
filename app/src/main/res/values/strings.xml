@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Beyond Refuge</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="racism">Racism</string>
+    <string name="antirefuge">Anti-Refuge</string>
+    <string name="nationalism">Nationalism</string>
+    <string name="sexism">Sexism</string>
+    <string name="selfpacedlearning">Self Paced Learning</string>
+    <string name="contactus">Contact Us</string>
+    <string name="aboutus">About Us</string>
+    <string name="title_activity_anti_refuge">AntiRefugeActivity</string>
+    <string name="title_activity_nationalism">NationalismActivity</string>
+    <string name="title_activity_sexisim">SexisimActivity</string>
+    <string name="title_activity_self_paced_learning">SelfPacedLearningActivity</string>
+    <string name="title_activity_contact_us">ContactUsActivity</string>
+
+</resources>
