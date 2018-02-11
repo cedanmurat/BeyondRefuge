@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +17,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.recodedcedan.beyondrefuge.Adapter.MRecycleAdpater;
+import com.example.recodedcedan.beyondrefuge.Adapter.RecycleAdapter;
+import com.example.recodedcedan.beyondrefuge.Model.News;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +42,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        mainAntiRefuge();
+        mainNationalism();
+        mainRacism();
+        mainSexism();
+
     }
 
     @Override
@@ -97,5 +112,102 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public void mainRacism(){
+        ArrayList<News> newsList;
+        RecyclerView recyclerView;
+        MRecycleAdpater mAdapter;
+        recyclerView = (RecyclerView) findViewById(R.id.m_recycler_view_r);
+        newsList=new ArrayList<>();
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Rasicm", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+
+        mAdapter = new MRecycleAdpater(newsList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+        recyclerView.setAdapter(mAdapter);
+
+    }
+    public void mainAntiRefuge(){
+        ArrayList<News> newsList;
+        RecyclerView recyclerView;
+        MRecycleAdpater mAdapter;
+        recyclerView = (RecyclerView) findViewById(R.id.m_recycler_view_ar);
+        newsList=new ArrayList<>();
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Help Refugee", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+
+        mAdapter = new MRecycleAdpater(newsList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+        recyclerView.setAdapter(mAdapter);
+    }
+    public void mainNationalism(){
+        ArrayList<News> newsList;
+        RecyclerView recyclerView;
+        MRecycleAdpater mAdapter;
+        recyclerView = (RecyclerView) findViewById(R.id.m_recycler_view_n);
+        newsList=new ArrayList<>();
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Nationalism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+
+        mAdapter = new MRecycleAdpater(newsList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+        recyclerView.setAdapter(mAdapter);
+    }
+    public void mainSexism(){
+        ArrayList<News> newsList;
+        RecyclerView recyclerView;
+        MRecycleAdpater mAdapter;
+        recyclerView = (RecyclerView) findViewById(R.id.m_recycler_view_s);
+        newsList=new ArrayList<>();
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image1));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image2));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image3));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image4));
+        newsList.add(new News("Adam Sand", "Sexism", "01.01.2018", "A quick and simplified answer is that Lorem Ipsum refers to text that the DTP (Desktop Publishing) industry use as replacement text when the real text is not available.", "http://www.loremipsum.de/about_lorem_ipsum.html", R.drawable.image5));
+
+        mAdapter = new MRecycleAdpater(newsList);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(mLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.HORIZONTAL));
+        recyclerView.setAdapter(mAdapter);
     }
 }
